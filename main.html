@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Portfolio</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Hey there, Bhagyesh this side!</h1>
+<body class="bg-gray-900 text-white">
+    <div class="relative isolate overflow-hidden">
+        <div class="container mx-auto px-6 py-10">
+            <header class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-blue-400">My Portfolio</h1>
+                <a href="https://www.linkedin.com/in/my-linkedin" class="text-blue-400 hover:underline">LinkedIn</a>
+            </header>
+            
+            <section class="mt-10">
+                <h2 class="text-4xl font-bold">Hello, I'm [Your Name]</h2>
+                <p class="mt-4 text-lg">Proficient AI/ML developer with expertise in building scalable data-driven solutions, advanced NLP pipelines, and AI-powered applications.</p>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-bold">Skills</h2>
+                <ul class="mt-4 grid grid-cols-2 gap-4">
+                    <li>Python, R, C, C++, C#, JavaScript</li>
+                    <li>Web Development: HTML, ASP.NET, MVC, Web API’s</li>
+                    <li>Database Management: MongoDB, MySQL, SQLite</li>
+                    <li>Data Visualization: Power BI</li>
+                    <li>Frameworks: Pandas, Scikit-Learn, Pytorch, FastAPI</li>
+                    <li>Cloud & Tools: AWS, Google Cloud, GitHub</li>
+                </ul>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-bold">Experience</h2>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">AI/ML Developer - Sheridan Centre for Applied AI</h3>
+                    <p class="text-gray-300">Sep 2024 – Present, Oakville</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Developed an automated pipeline to extract fleet management KPIs using Meta Llama 3 LLM.</li>
+                        <li>Enhanced KPI extraction accuracy by 20% using prompt engineering and few-shot learning.</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">Machine Learning Data Scientist</h3>
+                    <p class="text-gray-300">May 2024 – Aug 2024, Oakville</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Engineered data exploration scripts analyzing 30,000+ osteoporosis patient records.</li>
+                        <li>Improved model accuracy by 40% through a voting technique.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-bold">Projects</h2>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">Advanced RAG-Based Chatbot</h3>
+                    <p>Built a document-aware chatbot using AWS Amplify, DynamoDB, OpenSearch, and Claude v2 LLM.</p>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">SnapCal</h3>
+                    <p>Developed a Flask-based food image recognition app using Google's Inception v2 Model.</p>
+                </div>
+            </section>
+            
+            <footer class="mt-10 text-center">
+                <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
