@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>My Portfolio</title>
+    <style>
+        .highlight {
+            background: linear-gradient(90deg, rgba(0, 183, 255, 0.5), rgba(0, 255, 136, 0.5));
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
     <div class="relative isolate overflow-hidden">
@@ -22,12 +29,12 @@
             <section class="mt-10">
                 <h2 class="text-2xl font-bold">Skills</h2>
                 <ul class="mt-4 grid grid-cols-2 gap-4">
-                    <li>Python, R, C, C++, C#, JavaScript</li>
-                    <li>Web Development: HTML, ASP.NET, MVC, Web API’s</li>
-                    <li>Database Management: MongoDB, MySQL, SQLite</li>
-                    <li>Data Visualization: Power BI</li>
-                    <li>Frameworks: Pandas, Scikit-Learn, Pytorch, FastAPI</li>
-                    <li>Cloud & Tools: AWS, Google Cloud, GitHub</li>
+                    <li class="highlight">Python, R, C, C++, C#, JavaScript</li>
+                    <li class="highlight">Web Development: HTML, ASP.NET, MVC, Web API’s</li>
+                    <li class="highlight">Database Management: MongoDB, MySQL, SQLite</li>
+                    <li class="highlight">Data Visualization: Power BI</li>
+                    <li class="highlight">Frameworks: Pandas, Scikit-Learn, Pytorch, FastAPI</li>
+                    <li class="highlight">Cloud & Tools: AWS, Google Cloud, GitHub</li>
                 </ul>
             </section>
             
@@ -53,9 +60,29 @@
             
             <section class="mt-10">
                 <h2 class="text-2xl font-bold">Projects</h2>
+                
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">Skills Used:</h3>
+                    <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="highlight">AWS Amplify</li>
+                        <li class="highlight">DynamoDB</li>
+                        <li class="highlight">OpenSearch</li>
+                        <li class="highlight">Claude v2 LLM</li>
+                    </ul>
+                </div>
                 <div class="mt-4">
                     <h3 class="text-xl font-semibold">Advanced RAG-Based Chatbot</h3>
                     <p>Built a document-aware chatbot using AWS Amplify, DynamoDB, OpenSearch, and Claude v2 LLM.</p>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold">Skills Used:</h3>
+                    <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="highlight">Google's Inception v2</li>
+                        <li class="highlight">Flask</li>
+                        <li class="highlight">Python</li>
+                        <li class="highlight">Machine Learning</li>
+                    </ul>
                 </div>
                 <div class="mt-4">
                     <h3 class="text-xl font-semibold">SnapCal</h3>
@@ -68,5 +95,20 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const highlights = document.querySelectorAll(".highlight");
+            highlights.forEach(highlight => {
+                highlight.addEventListener("mouseover", () => {
+                    highlight.style.transform = "scale(1.1)";
+                    highlight.style.transition = "0.3s ease-in-out";
+                });
+                highlight.addEventListener("mouseout", () => {
+                    highlight.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
 </body>
 </html>
