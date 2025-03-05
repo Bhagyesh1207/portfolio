@@ -18,10 +18,26 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
+        #canvas-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        #rocket {
+            position: fixed;
+            bottom: 0;
+            right: 20px;
+            width: 60px;
+            transition: transform 0.5s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
     <div id="particles-js"></div>
+    <canvas id="canvas-bg"></canvas>
+    <img id="rocket" src="https://cdn-icons-png.flaticon.com/512/5731/5731767.png" alt="Rocket">
     <div class="relative isolate overflow-hidden">
         <div class="container mx-auto px-6 py-10">
             <header class="flex justify-between items-center">
@@ -30,19 +46,22 @@
             </header>
             
             <section class="mt-10">
-                <h2 class="text-4xl font-bold">Hello, I'm Bhagyesh </h2>
+                <h2 class="text-4xl font-bold">Hello, I'm Bhagyesh</h2>
                 <p class="mt-4 text-lg">Proficient AI/ML developer with expertise in building scalable data-driven solutions, advanced NLP pipelines, and AI-powered applications.</p>
             </section>
             
             <section class="mt-10">
                 <h2 class="text-2xl font-bold">Skills</h2>
-                <ul class="mt-4 grid grid-cols-2 gap-4">
-                    <li class="highlight">Python, R, C, C++, C#, JavaScript</li>
-                    <li class="highlight">Web Development: HTML, ASP.NET, MVC, Web API’s</li>
-                    <li class="highlight">Database Management: MongoDB, MySQL, SQLite</li>
-                    <li class="highlight">Data Visualization: Power BI</li>
-                    <li class="highlight">Frameworks: Pandas, Scikit-Learn, Pytorch, FastAPI</li>
-                    <li class="highlight">Cloud & Tools: AWS, Google Cloud, GitHub</li>
+                <ul class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+                    <li class="highlight">Python</li>
+                    <li class="highlight">JavaScript</li>
+                    <li class="highlight">C++</li>
+                    <li class="highlight">MongoDB</li>
+                    <li class="highlight">AWS</li>
+                    <li class="highlight">Power BI</li>
+                    <li class="highlight">Flask</li>
+                    <li class="highlight">Machine Learning</li>
+                    <li class="highlight">FastAPI</li>
                 </ul>
             </section>
             
@@ -68,29 +87,9 @@
             
             <section class="mt-10">
                 <h2 class="text-2xl font-bold">Projects</h2>
-                
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold">Skills Used:</h3>
-                    <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="highlight">AWS Amplify</li>
-                        <li class="highlight">DynamoDB</li>
-                        <li class="highlight">OpenSearch</li>
-                        <li class="highlight">Claude v2 LLM</li>
-                    </ul>
-                </div>
                 <div class="mt-4">
                     <h3 class="text-xl font-semibold">Advanced RAG-Based Chatbot</h3>
                     <p>Built a document-aware chatbot using AWS Amplify, DynamoDB, OpenSearch, and Claude v2 LLM.</p>
-                </div>
-                
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold">Skills Used:</h3>
-                    <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="highlight">Google's Inception v2</li>
-                        <li class="highlight">Flask</li>
-                        <li class="highlight">Python</li>
-                        <li class="highlight">Machine Learning</li>
-                    </ul>
                 </div>
                 <div class="mt-4">
                     <h3 class="text-xl font-semibold">SnapCal</h3>
@@ -128,6 +127,14 @@
                     highlight.style.transform = "scale(1)";
                 });
             });
+        });
+    </script>
+    <script>
+        const rocket = document.getElementById("rocket");
+        window.addEventListener("scroll", function() {
+            let scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            let moveDistance = -scrollPercentage * (window.innerHeight + 100);
+            rocket.style.transform = `translateY(${moveDistance}px)`;
         });
     </script>
 </body>
